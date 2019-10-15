@@ -4,16 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DB94AE3E-A395-44CD-880C-3CAC0B5F85BD}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>ConwayGameOfLifeApp</RootNamespace>
-    <AssemblyName>ConwayGameOfLifeApp</AssemblyName>
+    <ProjectGuid>{955E7C82-903A-435A-AC72-34658DE5FA87}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ConwayGameOfLifeApp.GameStructures</RootNamespace>
+    <AssemblyName>ConwayGameOfLifeApp.GameStructures</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -42,11 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="CellGrid.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ConwayGameOfLifeApp.Enums\ConwayGameOfLifeApp.Enums.csproj">
@@ -56,10 +52,6 @@
     <ProjectReference Include="..\ConwayGameOfLifeApp.GameRules\ConwayGameOfLifeApp.GameRules.csproj">
       <Project>{16e867c8-d848-4c23-9570-d7e969b6a26c}</Project>
       <Name>ConwayGameOfLifeApp.GameRules</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ConwayGameOfLifeApp.GameStructures\ConwayGameOfLifeApp.GameStructures.csproj">
-      <Project>{955e7c82-903a-435a-ac72-34658de5fa87}</Project>
-      <Name>ConwayGameOfLifeApp.GameStructures</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
